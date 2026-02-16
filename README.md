@@ -1,0 +1,1 @@
+# High-Availability-Setup-for-Keycloak-in-Kubernetes
