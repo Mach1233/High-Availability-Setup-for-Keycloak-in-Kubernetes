@@ -41,8 +41,7 @@ The entire system is orchestrated using **K3s (Lightweight Kubernetes Distributi
 
 ## 🖼️ Diagram 1 – Global Infrastructure Architecture
 
-> 📍 Insert Global Architecture Diagram Here  
-> (User → HAProxy → K3s Cluster → Keycloak Cluster → Infinispan → PostgreSQL)
+<img width="1203" height="470" alt="k3s-architecture" src="https://github.com/user-attachments/assets/15f93b33-22a8-4e35-9ae2-bb28b7b6b3b5" />
 
 ---
 
@@ -75,10 +74,8 @@ This design ensures:
 
 ## 🖼️ Diagram 2 – Kubernetes HA Control Plane
 
-> 📍 Insert Kubernetes Control Plane Diagram Here  
-> (HAProxy → Master 1 / Master 2 → Worker Nodes)
+<img width="1079" height="525" alt="keycloak-architecture" src="https://github.com/user-attachments/assets/9b079b92-987f-4082-8904-226b60191935" />
 
----
 
 # 🔐 3. Identity Layer – Keycloak Cluster
 
@@ -108,14 +105,6 @@ Keycloak is deployed in clustered mode with:
 - Persistent data stored in PostgreSQL
 - Load-balanced service exposure
 
----
-
-## 🖼️ Diagram 3 – Keycloak Cluster Architecture
-
-> 📍 Insert Keycloak Cluster Diagram Here  
-> (Service → Keycloak Pod 1 / Pod 2 / Pod 3 → Infinispan → PostgreSQL)
-
----
 
 # ⚡ 4. Distributed Caching Layer – Infinispan
 
@@ -142,10 +131,9 @@ With Infinispan:
 
 ---
 
-## 🖼️ Diagram 4 – Session Replication Flow
+## 🖼️ Diagram 3 – Session Replication Flow
 
-> 📍 Insert Session Replication Diagram Here  
-> (User Login → Keycloak Pod → Infinispan Sync → Other Pods)
+<img width="922" height="624" alt="workflow-keycloak" src="https://github.com/user-attachments/assets/16d1af3b-db40-4529-b3ae-1df680d17e25" />
 
 ---
 
